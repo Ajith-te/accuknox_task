@@ -31,33 +31,41 @@ Ensure you have the following installed:
 
 
 2. **Create a virtual environment and activate it**
+   ```bash
     python -m venv venv
+   ```bash
     source venv/bin/activate  # On Windows `venv\Scripts\activate`
 
 
-3. **Install the required packages**
+4. **Install the required packages**
+   ```bash
     pip install -r requirements.txt
 
 
-4. **Run migrations**
+6. **Run migrations**
+   ```bash
     python manage.py migrate
 
    
-5. **Create a superuser**
+8. **Create a superuser**
+   ```bash
     python manage.py createsuperuser
 
 
-6. **Start the development server:**
+10. **Start the development server:**
+    ```bash
     python manage.py runserver
 
 
 ### Docker Setup
 
 1. **Build the Docker image**
+   ```bash
     docker build -t your-image-name .
 
 
-2. **Run the Docker container**
+3. **Run the Docker container**
+   ```bash
     docker run -p 8000:8000 your-image-name
 
 
