@@ -57,18 +57,6 @@ Ensure you have the following installed:
     python manage.py runserver
 
 
-### Docker Setup
-
-1. **Build the Docker image**
-   ```bash
-    docker build -t your-image-name .
-
-
-3. **Run the Docker container**
-   ```bash
-    docker run -p 8000:8000 your-image-name
-
-
 ### API Endpoints
 
  - User Signup: POST /api/signup/

@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 8000
 
 # Run server
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "project_name.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "accuknox_task.wsgi:application"]
