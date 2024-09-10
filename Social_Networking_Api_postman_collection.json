@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "36fb8247-9da9-43d9-9e81-9851fa5eeab6",
+		"name": "Social-Networking -Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31772096"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ajit\",\r\n    \"email\": \"ajid2@gamil.com\",\r\n    \"password\": \"123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/app/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ajid2@gamil.com\",\r\n    \"password\": \"123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/app/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "search-users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1OTUzNzc1LCJpYXQiOjE3MjU5NTE5NzUsImp0aSI6Ijg1ZWVhMTIxNDhmYzQ0MzlhYTE3MTFmNGIzNWMwMmMxIiwidXNlcl9pZCI6NH0.Lm9mzNV2G3B1EwU3BDLJOg1O3RelJLMZQYDimH9k6PA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"testuser@example.com\",\r\n    \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/app/search/?q=a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friend-request-send",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1OTUzNzc1LCJpYXQiOjE3MjU5NTE5NzUsImp0aSI6Ijg1ZWVhMTIxNDhmYzQ0MzlhYTE3MTFmNGIzNWMwMmMxIiwidXNlcl9pZCI6NH0.Lm9mzNV2G3B1EwU3BDLJOg1O3RelJLMZQYDimH9k6PA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to_user\":2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/app/friend-request/send/"
+			},
+			"response": []
+		},
+		{
+			"name": "friend-request-respond",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1OTUzMTMwLCJpYXQiOjE3MjU5NTEzMzAsImp0aSI6ImRjMjNlNzIxNDBjNjRmNjU4NzRmMWM4MGVhYmMzZWZjIiwidXNlcl9pZCI6Mn0.-mYb8J88QzX4VbblCL5PZWBde2yp8r6PFhXlqWqG7m4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"accepted\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/app/friend-request/1/respond/"
+			},
+			"response": []
+		},
+		{
+			"name": "list-friends",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1OTUzMTMwLCJpYXQiOjE3MjU5NTEzMzAsImp0aSI6ImRjMjNlNzIxNDBjNjRmNjU4NzRmMWM4MGVhYmMzZWZjIiwidXNlcl9pZCI6Mn0.-mYb8J88QzX4VbblCL5PZWBde2yp8r6PFhXlqWqG7m4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"accepted\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/app/friends/"
+			},
+			"response": []
+		},
+		{
+			"name": "list-friend-request-pending",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1OTUzMTMwLCJpYXQiOjE3MjU5NTEzMzAsImp0aSI6ImRjMjNlNzIxNDBjNjRmNjU4NzRmMWM4MGVhYmMzZWZjIiwidXNlcl9pZCI6Mn0.-mYb8J88QzX4VbblCL5PZWBde2yp8r6PFhXlqWqG7m4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"accepted\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/app/friend-request/pending/"
+			},
+			"response": []
+		}
+	]
+}

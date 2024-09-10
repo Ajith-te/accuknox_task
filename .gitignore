@@ -1,0 +1,14 @@
+# Ignore .env file
+.env
+
+# Ignore .idea directory (common for JetBrains IDEs)
+.idea
+
+# Ignore __pycache__ directory inside distributor directory
+app/__pycache__
+app/migrations
+
+network/__pycache__
+
+# Ignore venv directory (virtual environment)
+venv/
