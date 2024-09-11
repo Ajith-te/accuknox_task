@@ -14,7 +14,7 @@ services:
 
   web:
     build: .
-    command: gunicorn project_name.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn accuknox_task.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - .:/app
     ports:
